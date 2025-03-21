@@ -1,0 +1,141 @@
+﻿@model EcommerceShop.Models.buynow
+
+@{
+    ViewData["Title"] = "Order Form";
+}
+
+<!-- Form Section with Better Styling -->
+<section id="order-form" class="section-p1">
+    <div class="container">
+        <h2 class="text-center">Place Your Order</h2>
+
+        <form asp-controller="Home" asp-action="Order" method="post">
+            <!-- Product Name (pre-populated from the cart) -->
+            <div class="form-group">
+                <label for="Product_Name">Product Name</label>
+                <input type="text" class="form-control" asp-for="Product_Name" value="@Model.Product_Name" readonly />
+            </div>
+
+            <!-- Customer Name -->
+            <div class="form-group">
+                <label for="Name">Full Name</label>
+                <input type="text" asp-for="Name" class="form-control" placeholder="Enter your full name" required />
+            </div>
+
+            <!-- Quantity -->
+            <div class="form-group">
+                <label for="Quantity">Quantity</label>
+                <input type="number" asp-for="Quantity" class="form-control" value="1" min="1" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Name">Phone Number</label>
+                <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Enter your full Phone Number" required />
+            </div>
+
+            <!-- Payment Method -->
+            <div class="form-group">
+                <label for="Payment_Method">Payment Method</label>
+                <select class="form-control" id="Payment_Method" required onchange="toggleEasyPaisaInput()">
+                    <option value="COD">Cash on Delivery</option>
+                    <option value="Online">Online Payment (EasyPaisa)</option>
+                </select>
+            </div>
+
+            <!-- EasyPaisa Payment Input (Only shown when "Online Payment" is selected) -->
+            <div id="easyPaisaInput" class="form-group" style="display: none;">
+                <label for="EasyPaisa_Number">EasyPaisa Number</label>
+                <input type="text" asp-for="payment" class="form-control" placeholder="Enter your EasyPaisa Number" />
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="form-group">
+                <label for="Address">Shipping Address</label>
+                <input type="text" asp-for="Address" class="form-control" placeholder="Enter your address" required />
+            </div>
+
+
+
+
+
+
+
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Custom CSS for Styling -->
+<style>
+    /* General Styles */
+    .section-p1 {
+        padding: 40px 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    /* Form Styling */
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    /* Charges Breakdown */
+    .charges-breakdown {
+        margin-top: 20px;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+        .charges-breakdown h4 {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .charges-breakdown .form-group label {
+            font-weight: normal;
+        }
+</style>
+
+<!-- JavaScript to Toggle EasyPaisa Input -->
+<script>
+    function toggleEasyPaisaInput() {
+        var paymentMethod = document.getElementById("Payment_Method").value;
+        var easyPaisaInput = document.getElementById("easyPaisaInput");
+
+        if (paymentMethod === "Online") {
+            easyPaisaInput.style.display = "block";  // Show EasyPaisa input field
+        } else {
+            easyPaisaInput.style.display = "none";   // Hide EasyPaisa input field
+        }
+    }
+</script>

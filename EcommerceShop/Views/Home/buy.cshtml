@@ -1,0 +1,26 @@
+﻿@model EcommerceShop.Models.AddProduct
+
+
+<style>
+    .modal-dialog {
+        max-width: 900px; /* Adjust width as needed */
+    }
+</style>
+<section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+        <img src="~/addproductimg/@Model.Product_Images" asp-append-version="true" alt="Product Image" width="100%" id="MainImg">
+    </div>
+
+    <div class="single-pro-details">
+        <h6>@Html.DisplayFor(model => model.AddCategory.category_name)</h6>
+        <h4>@Html.DisplayFor(model => model.Product_Name)</h4>
+        <h2>Rs: @Html.DisplayFor(model => model.Product_Price)</h2>
+
+        <form method="post" asp-controller="Home" asp-action="Cart">
+            <a class="normal btn btn-warning" asp-route-id="@Model.Product_id" asp-controller="Home" asp-action="addcart">Add To Cart</a>
+        </form>
+
+        <h4>Product Details</h4>
+        <span>@Html.DisplayFor(model => model.Product_Details)</span>
+    </div>
+</section>

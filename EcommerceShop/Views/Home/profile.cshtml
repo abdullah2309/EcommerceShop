@@ -1,0 +1,35 @@
+﻿@model IEnumerable<EcommerceShop.Models.register>
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container my-5">
+
+    <h1 class="text-center mb-4">User Profiles</h1>
+
+    <div class="">
+        @foreach (var item in Model)
+        {
+            <div class="text-center mb-4">
+                <div class="card shadow-lg rounded-lg" style="border: none;">
+                    <img src="~/icons/IMG_1864.webp" class="card-img-top rounded-circle mx-auto mt-3" alt="User Avatar" style="width: 150px; height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center font-weight-bold" style="font-size: 1.25rem;">@item.Name</h5>
+                        <p class="card-text text-center">
+                            <strong>Email:</strong> @item.Email<br />
+                            <strong>Phone Number:</strong> @item.PhoneNumber<br />
+                            <strong>Address:</strong> @item.Address<br />
+                            <strong>Password:</strong> @item.Password
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="proedit" asp-route-id="@item.Id" class="btn btn-warning btn-sm w-100">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+

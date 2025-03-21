@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Shop";
+}
+<style>
+    #page-header {
+        background-image: url('@Url.Content("~/img/banner/b1.jpg")');
+     
+    }
+</style>
+
+<section id="page-header">
+    <h2>#stayhome</h2>
+    <p>save more with coupons & up to 70% off!</p>
+</section>
+
+@Html.Partial("_shopcart" ,ViewData["cart"]);

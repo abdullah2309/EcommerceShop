@@ -1,0 +1,137 @@
+﻿<style>
+       #main {
+        background-image: url('@Url.Content("~/img/bg-img.jpg")');
+    }
+
+    #banner {
+        background-image: url("./img/banner/b2.jpg");}
+
+    #sm-banner .banner-box2 {
+        background-image: url("./img/banner/b10.jpg");
+    }
+
+    #banner3 .banner-box {
+        background-image: url("./img/banner/b7.jpg");}
+
+    #banner3 .banner-box2 {
+        background-image: url("./img/banner/b4.jpg");
+    }
+
+    #banner3 .banner-box3 {
+        background-image: url("./img/banner/b18.jpg");
+    }
+
+    #sm-banner .banner-box2 {
+        background-image: url("./img/banner/b10.jpg");
+    }
+    #newsletter {
+        background-image: url("./img/banner/b14.png");}
+
+
+        #page-header.blog-header {
+            background-image: url("./img/banner/b19.jpg");
+        }
+
+        #page-header.about-header {
+            background-image: url("./img/about/banner.png");
+        }
+
+</style>
+
+
+
+
+<section id="main">
+    <h4>Trade-in-offer</h4>
+    <h2>Super value deals</h2>
+    <h1>On all products</h1>
+    <p>save more with coupons & up to 70% off!</p>
+    <button class="btn">Shop Now</button>
+</section>
+
+<section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="img/features/f1.png" alt="">
+        <h6>Free Shipping</h6>
+    </div>
+    <div class="fe-box">
+        <img src="img/features/f2.png" alt="">
+        <h6>Online Order</h6>
+    </div>
+    <div class="fe-box">
+        <img src="img/features/f3.png" alt="">
+        <h6>Save Money</h6>
+    </div>
+    <div class="fe-box">
+        <img src="img/features/f4.png" alt="">
+        <h6>Promotions</h6>
+    </div>
+    <div class="fe-box">
+        <img src="img/features/f5.png" alt="">
+        <h6>Happy Sell</h6>
+    </div>
+    <div class="fe-box">
+        <img src="img/features/f6.png" alt="">
+        <h6>F24/7 Support</h6>
+    </div>
+</section>
+
+<section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>Summer Collection New Modern Design</p>
+    <div class="pro-container">
+        @Html.Partial("_shopcart", ViewData["cart"]);
+    </div>
+</section>
+
+<section id="banner" class="section-m1">
+    <h4>Repair Services</h4>
+    <h2>Upto <span>70% Off</span> - All t-Shirts & Accessories</h2>
+    <button class="normal">Explore More</button>
+</section>
+
+<section id="product1" class="section-p1">
+    <h2>New Arrivals</h2>
+    <p>Summer Collection New Modern Design</p>
+    <div class="pro-container">
+        
+        @Html.Partial("_salecart", ViewData["salecart"]);
+
+    </div>
+</section>
+
+<section id="sm-banner" class="section-p1">
+   
+    <div class="banner-box banner-box2">
+        <h4>spring/summer</h4>
+        <h2>upcoming season</h2>
+        <span>The best classic dress is on sale at cara</span>
+        <button class="white">Collection</button>
+    </div>
+</section>
+
+<section id="banner3">
+    <div class="banner-box">
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+    </div>
+    <div class="banner-box banner-box2">
+        <h2>NEW FOOTWEAR COLLECTION</h2>
+        <h3>Spring / Summer 2023</h3>
+    </div>
+    <div class="banner-box banner-box3">
+        <h2>T-SHIRTS</h2>
+        <h3>New Trendy Prints</h3>
+    </div>
+</section>
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>

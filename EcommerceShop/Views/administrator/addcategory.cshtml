@@ -1,0 +1,65 @@
+﻿@model EcommerceShop.Models.AddCategory;
+
+
+@{
+    ViewData["Title"] = "Add Category";
+    Layout = "_Admin_Layout";
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles mx-0">
+            <div class="col-sm-6 p-md-0">
+                <div class="welcome-text">
+                    <h4>Boost Your Sales – Add New Category in Just a Click!</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button to Trigger Modal -->
+        <div class="container mt-5">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoryModal">
+                Add Category
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="categoryModalLabel">Add Category</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form asp-controller="administrator" asp-action="addcategory" method="post">
+                            <div class="mb-3">
+                                <label for="CategoryName" class="form-label">Category Name</label>
+                                <input type="text" class="form-control" asp-for="category_name" id="category_name" placeholder="Enter Category Name" required>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Category</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+       
+        @Html.Partial("_showcategory", ViewData["addCategories"]);
+        
+            
+        
+
+    </div>
+</div>

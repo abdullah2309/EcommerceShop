@@ -1,0 +1,39 @@
+﻿@model IEnumerable<EcommerceShop.Models.addsaleproduct>
+
+
+<section id="product1" class="section-p1">
+    <div class="pro-container">
+
+        @foreach (var item in Model)
+        {
+
+            <div class="pro" >
+                <a asp-action="salebuy" asp-route-id="@item.Product_id">
+                    <img class="shirt" src="~/addsaleproductimg/@item.Product_Images" asp-append-version="true" alt="Product Image" alt="">
+                </a>
+                
+                <div class="des">
+                    <span>  @Html.DisplayFor(modelItem => item.AddCategory.category_name)</span>
+                    <h5>
+                        @Html.DisplayFor(modelItem => item.Product_Name)
+                    </h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>
+                        Rs
+                        @Html.DisplayFor(modelItem => item.Product_Price)
+                    </h4>
+                </div>
+                <a href="#"><i class='bx bx-cart cart'></i></a>
+            </div>
+
+        }
+
+
+    </div>
+</section>

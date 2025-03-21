@@ -1,0 +1,50 @@
+﻿@model EcommerceShop.Models.register;
+<style>
+    #page-header.about-header {
+        background-image: url('@Url.Content("~/img/about/banner.png")');
+    }
+
+</style>
+<section id="page-header" class="about-header">
+    <h2>Register to Get Started</h2>
+    <p>Ready to Explore? Register Today!</p>
+</section>
+<br/>
+@if (TempData["submitted"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show container" role="alert">
+        <strong>Success!</strong> @TempData["submitted"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<section id="form-details" class="" >
+   
+    <form asp-controller="registerlogin" asp-action="register" method="post">
+       
+        <span>LEAVE A MESSAGE</span>
+        <h2>We love to hear from you</h2><br/>
+
+        <input type="text" asp-for="Name" placeholder="Your Name">
+        <span class="text-danger mb-2" asp-validation-for="Name"></span>
+
+        <input type="email" asp-for="Email" placeholder="E-mail">
+        <span class="text-danger mb-2" asp-validation-for="Email"></span>
+
+        <input type="number" asp-for="PhoneNumber" placeholder="Phone Number">
+        <span class="text-danger mb-2" asp-validation-for="PhoneNumber"></span>
+
+        <input type="text" asp-for="Address" placeholder="Address">
+        <span class="text-danger mb-2" asp-validation-for="Address"></span>
+
+        <input type="password" asp-for="Password" placeholder="Password">
+        <span class="text-danger mb-2" asp-validation-for="Password"></span>
+
+
+
+
+        <button type="submit" class="normal">Submit</button>
+    </form>
+
+
+</section>

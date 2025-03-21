@@ -1,0 +1,54 @@
+﻿@model EcommerceShop.Models.AddProduct
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_Admin_Layout";
+
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+<h1>Edit</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Product_id" />
+            <div class="form-group">
+                <label asp-for="Product_Name" class="control-label"></label>
+                <input asp-for="Product_Name" class="form-control" />
+                <span asp-validation-for="Product_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product_Price" class="control-label"></label>
+                <input asp-for="Product_Price" class="form-control" />
+                <span asp-validation-for="Product_Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product_Details" class="control-label"></label>
+                <textarea class="form-control" asp-for="Product_Details"  rows="4"  required></textarea>
+                <span asp-validation-for="Product_Details" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product_Images" class="control-label"></label>
+                <input asp-for="Product_Images" type="file" class="form-control" />
+                <span asp-validation-for="Product_Images" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="category_list" class="control-label"></label>
+                <select asp-for="category_list" class="form-control" asp-items="ViewBag.category_name"></select>
+                <span asp-validation-for="category_list" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+</div>
+</div>

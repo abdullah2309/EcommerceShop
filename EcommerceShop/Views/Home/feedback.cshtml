@@ -1,0 +1,62 @@
+﻿@model EcommerceShop.Models.feedback;
+@{
+    ViewData["Title"] = "Contact";
+}
+<style>
+    #page-header.about-header {
+        background-image: url('@Url.Content("~/img/about/banner.png")');
+    }
+
+</style>
+<section id="page-header" class="about-header">
+    <h2>#let's_talk</h2>
+    <p>LEAVE A MESSAGE, We love to hear from you!</p>
+</section>
+
+@if (TempData["feedback"] != null)
+{
+    <br />
+    <br />
+    <div class="alert alert-success alert-dismissible fade show container" role="alert">
+        <strong></strong> @TempData["feedback"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<section id="form-details">
+    <form action="feedback" method="post">
+        <span>Feedback</span>
+        <h2>We love to hear from you</h2>
+        <input type="text" asp-for="Name" placeholder="Your Name" required> 
+        <input type="text" asp-for="Email" placeholder="E-mail"required>
+        <input type="text" asp-for="Suject" placeholder="Subject" required>
+        <textarea  asp-for="Massage" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <button class="normal" type="submit">Submit</button>
+    </form>
+
+    <div class="people">
+        <div>
+            <img src="~/img/people/1.png" alt="">
+            <p><span>John Doe</span> Senior Marketing Manager <br> Phone: + 000 123 456 789 <br> Email: contact@example.com</p>
+        </div>
+        <div>
+            <img src="~/img/people/2.png" alt="">
+            <p><span>William Smith</span> Senior Marketing Manager <br> Phone: + 000 123 456 789 <br> Email: contact@example.com</p>
+        </div>
+        <div>
+            <img src="~/img/people/3.png" alt="">
+            <p><span>Emma Stone</span> Senior Marketing Manager <br> Phone: + 000 123 456 789 <br> Email: contact@example.com</p>
+        </div>
+    </div>
+</section>
+
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>

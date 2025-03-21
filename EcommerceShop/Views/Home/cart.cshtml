@@ -1,0 +1,99 @@
+﻿@model IEnumerable<EcommerceShop.Models.Addtocart>
+@{
+    ViewData["Title"] = "Cart";
+}
+<style>
+    #page-header.about-header {
+        background-image: url('@Url.Content("~/img/about/banner.png")');
+    }
+</style>
+<style>
+    /* Set a fixed width for the Product Name column */
+    .product-name {
+        width: 200px; /* You can adjust this value */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Optional: Wrap text if the column needs to expand (in case you want wrapping) */
+    .product-name-wrap {
+        width: 200px; /* Adjust this as needed */
+        white-space: normal;
+        word-wrap: break-word;
+    }
+</style>
+
+<section id="page-header" class="about-header">
+    <h2>#let's_talk</h2>
+    <p>LEAVE A MESSAGE, We love to hear from you!</p>
+</section>
+
+<section id="cart" class="section-p1">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @if (Model != null)
+            {
+                foreach (var cartItem in Model)
+                {
+                    var subtotal = cartItem.Product_Price * (cartItem.Quantity != null ? int.Parse(cartItem.Quantity) : 1);
+
+                    <tr>
+                        <td><a asp-action="CartDetele" asp-route-id="@cartItem.id"> <i class='bx bx-x-circle'></i></a> </td>
+                        <td><img src="~/addproductimg/@cartItem.Product_Images" asp-append-version="true" alt="Product Images"></td>
+
+                        <!-- Product Name -->
+                        <td class="product-name">@cartItem.Product_Name</td>
+
+                        <!-- Product Price -->
+                        <td>Rs : @cartItem.Product_Price</td>
+
+                        <!-- Quantity Input -->
+                        <td>
+                            <input type="number" value="@cartItem.Quantity" min="1"
+                                   onchange="updateSubtotal(this, @cartItem.Product_Price, @cartItem.id)">
+                        </td>
+
+                        <!-- Subtotal -->
+                        <td id="subtotal-@cartItem.id">Rs : @subtotal</td>
+
+                        <td>
+                          
+                                <a asp-controller="Home" asp-action="Order" asp-route-Product_Name="@cartItem.Product_Name" class="btn btn-secondary">Order</a>
+                            
+                        </td>
+
+
+
+
+                    </tr>
+                }
+            }
+            else
+            {
+              //  <p>Your cart is empty!</p>
+            }
+
+        </tbody>
+    </table>
+</section>
+
+<script>
+    function updateSubtotal(inputElement, price, itemId) {
+        var quantity = inputElement.value;
+        var subtotal = price * quantity;
+        document.getElementById("subtotal-" + itemId).innerText = "Rs : " + subtotal.toFixed(2);
+    }
+</script>

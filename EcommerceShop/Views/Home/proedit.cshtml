@@ -1,0 +1,63 @@
+﻿@model EcommerceShop.Models.register
+
+@{
+    ViewData["Title"] = "proedit";
+}
+<hr />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header text-center bg-primary text-white">
+                    <h3>Edit Profile</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="proedit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <!-- Name Field -->
+                        <div class="form-group mb-3">
+                            <label asp-for="Name" class="control-label">Full Name</label>
+                            <input asp-for="Name" class="form-control form-control-lg" placeholder="Enter your full name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group mb-3">
+                            <label asp-for="Email" class="control-label">Email Address</label>
+                            <input asp-for="Email" class="form-control form-control-lg" placeholder="Enter your email address" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <!-- Phone Number Field -->
+                        <div class="form-group mb-3">
+                            <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
+                            <input asp-for="PhoneNumber" class="form-control form-control-lg" placeholder="Enter your phone number" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+
+                        <!-- Address Field -->
+                        <div class="form-group mb-3">
+                            <label asp-for="Address" class="control-label">Address</label>
+                            <input asp-for="Address" class="form-control form-control-lg" placeholder="Enter your address" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group mb-4">
+                            <label asp-for="Password" class="control-label">Password</label>
+                            <input asp-for="Password" class="form-control form-control-lg" placeholder="Enter your password" type="text" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group">
+                            <input type="submit" value="Save Changes" class="btn btn-success btn-lg btn-block" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
