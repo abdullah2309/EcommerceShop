@@ -4,4 +4,4 @@ Welcome to Cara, your one-stop destination for seamless online shopping! Our
 eCommerce platform is designed to provide a user-friendly, secure, and convenient shopping experience, offering a wide range of products at competitive prices.
 </p>
 <br>
-<img src="https://github.com/abdullah2309/EcommerceShop/blob/abdullah/master/EcommerceShop/wwwroot/Screenshot%202025-02-16%20150931.png">
+<img src="https://github.com/abdullah2309/EcommerceShop/blob/abdullah/master/EcommerceShop/wwwroot/Screenshot%202025-02-16%20150931.png"  width="100%" >
