@@ -14,4 +14,4 @@ namespace EcommerceShop.Models
         public DateTime CreatedDate { get; set; }
     }
 }
-///aa/aa////a// email //
+///aa/aa////a// email // //
