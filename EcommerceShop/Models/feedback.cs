@@ -15,4 +15,4 @@ namespace EcommerceShop.Models
     }
 }
 
-///\aa/aa////a// email // // Hi, I am interested in your product. Please send me more details. // 2021-07-01 12:00:00
+//\aa/aa////a// email // // Hi, I am interested in your product. Please send me more details. // 2021-07-01 12:00:00
