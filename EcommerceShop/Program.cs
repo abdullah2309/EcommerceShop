@@ -10,13 +10,15 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession();
 
+///abdullah HI ///
+
 
 builder.Services.AddDbContext<MyDbcontext>(a =>
-a.UseSqlServer("Server=DESKTOP-KHBGNKV\\MSSQLSERVER01;Database=ecommerce_shop;trusted_connection=True;TrustServerCertificate=true;")
+a.UseSqlServer("Server=DESKTOP-KHBGNKV\\SQLEXPRESS;Database=ecommerce_shop;trusted_connection=True;TrustServerCertificate=true;")
 );
 
 builder.Services.AddDbContext<registerdb>(a =>
-a.UseSqlServer("Server=DESKTOP-KHBGNKV\\MSSQLSERVER01;Database=ecommerce_shop;trusted_connection=True;TrustServerCertificate=true;")
+a.UseSqlServer("Server=DESKTOP-KHBGNKV\\SQLEXPRESS;Database=ecommerce_shop;trusted_connection=True;TrustServerCertificate=true;")
  );
 
 
