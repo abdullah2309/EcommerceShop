@@ -8,7 +8,9 @@ namespace EcommerceShop.Models
         {
             
         }
-
+        /// <summary>
+        /// ////////    
+        /// </summary>
         public DbSet<feedback> feedbacks { get; set; }
         public DbSet<AddCategory> addCategories{ get; set; }
         public DbSet<AddProduct> addProducts  { get; set; }
