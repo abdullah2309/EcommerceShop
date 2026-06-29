@@ -6,7 +6,7 @@ eCommerce platform is designed to provide a user-friendly, secure, and convenien
 <br>
 <h2>User Panel </h2> 
 <img src="https://github.com/abdullah2309/EcommerceShop/blob/abdullah/master/EcommerceShop/wwwroot/Screenshot%202025-02-16%20150931.png"  width="100%" >
-<br>
+<br> 
 <h2>Admin Panel </h2> 
 <br>
 <img src="https://github.com/abdullah2309/Vehicle-Insurance-Management/blob/Abdullah/main/Vehicle%20Insurance%20Management/wwwroot/admin.png" >
