@@ -10,7 +10,7 @@ namespace EcommerceShop.Controllers
 	 
 	 var count = 1;
      publib Testing(){
-	 
+	 count++
 	 }
      
 	}
