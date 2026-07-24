@@ -13,7 +13,7 @@ namespace EcommerceShop.Controllers
 	 count++
 	 }
 	   public store(data){
-	   
+	   var store = data;
 	   }
      
 	}
