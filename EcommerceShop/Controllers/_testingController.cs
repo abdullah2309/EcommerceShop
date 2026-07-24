@@ -7,7 +7,9 @@ namespace EcommerceShop.Controllers
 	{ 
 	 var data = [34,342,21,5,43,5,35,34];
 	 var data2 = ["a","v","r","s","df"];
-    
+     publib Testing(){
+	 
+	 }
      
 	}
 }
