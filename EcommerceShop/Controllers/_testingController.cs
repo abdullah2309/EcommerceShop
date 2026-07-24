@@ -9,9 +9,12 @@ namespace EcommerceShop.Controllers
 	 var data2 = ["a","v","r","s","df"];
 	 
 	 var count = 1;
-     publib Testing(){
+     public Testing(){
 	 count++
 	 }
+	   public store(data){
+	   
+	   }
      
 	}
 }
