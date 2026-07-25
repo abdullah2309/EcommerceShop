@@ -16,6 +16,10 @@ namespace EcommerceShop.Controllers
 	   public store(data){
 	   var store = data;
 	   }
+	   public inout(inout){
+	   var store = data;
+	   
+	   }
      
 	}
 }
