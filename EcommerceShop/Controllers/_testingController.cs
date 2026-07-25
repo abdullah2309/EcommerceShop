@@ -17,7 +17,7 @@ namespace EcommerceShop.Controllers
 	   var store = data;
 	   }
 	   public inout(inout){
-	   var store = data;
+	   var inout = inout;
 	   
 	   }
      
