@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace EcommerceShop.Controllers
 {
     public class adminaddsaleproductController : Controller
-    {
+    { 
         private readonly MyDbcontext dbcontext;
 
         public adminaddsaleproductController(MyDbcontext dbcontext , IWebHostEnvironment web)
