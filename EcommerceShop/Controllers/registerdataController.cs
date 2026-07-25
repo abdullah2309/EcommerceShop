@@ -32,6 +32,7 @@ namespace EcommerceShop.Controllers
             var data = dbcontext.registers.Find(id);
             dbcontext.registers.Remove(data);
             dbcontext.SaveChanges();
+            // return RedirectToAction("Index");
             return RedirectToAction("Index");
         }
     }
