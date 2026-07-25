@@ -7,7 +7,7 @@ namespace EcommerceShop.Controllers
 	{ 
 	 var data = [34,342,21,5,43,5,35,34];
 	 var data2 = ["a","v","r","s","df"];
-	 var data3 = ["a2","v3","r4","s","df"];
+	 var data3 = ["a2","v3","r4","34s","3d4f3"];
 	 
 	 var count = 1;
      public Testing(){
