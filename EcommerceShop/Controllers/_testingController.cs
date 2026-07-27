@@ -25,7 +25,8 @@ namespace EcommerceShop.Controllers
 	   var e_data = data;
 	   if(e_data = null){
 	    reture;
-	   }
+	   }else if(e_data = ""){
+	    reture;
 	   
 	   }
      
