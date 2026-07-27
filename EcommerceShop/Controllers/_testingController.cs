@@ -20,6 +20,15 @@ namespace EcommerceShop.Controllers
 	   var inout_data = inout;
 	   
 	   }
+
+	    public july(data){
+	   var e_data = data;
+	   if(e_data = null){
+	    return;
+	   }else if(e_data = ""){
+	    return;
+	   
+	   }
      
 	}
 }
