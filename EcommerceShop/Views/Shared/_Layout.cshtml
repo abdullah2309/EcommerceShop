@@ -32,7 +32,7 @@
                 <li><a asp-controller="Home" asp-action="about">About</a></li>
                 <li><a asp-controller="Home" asp-action="feedback">Feedback</a></li>
 
-@{
+   @{
     var item = HttpContextAccessor.HttpContext.Session.GetString("LoginSession");
     if (item != null)
     {
@@ -44,7 +44,7 @@
         <li><a asp-controller="registerlogin" asp-action="register">Register</a></li>
         <li><a asp-controller="registerlogin" asp-action="login">Login</a></li>
     }
-}
+  }
 
               
 
@@ -54,7 +54,6 @@
 
             </ul>
         </div>
-
         
     </section>
 
