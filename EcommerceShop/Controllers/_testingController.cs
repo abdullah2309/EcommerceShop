@@ -24,9 +24,9 @@ namespace EcommerceShop.Controllers
 	    public july(data){
 	   var e_data = data;
 	   if(e_data = null){
-	    reture;
+	    return;
 	   }else if(e_data = ""){
-	    reture;
+	    return;
 	   
 	   }
      
