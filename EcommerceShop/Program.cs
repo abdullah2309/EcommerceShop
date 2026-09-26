@@ -21,10 +21,7 @@ builder.Services.AddDbContext<registerdb>(a =>
 a.UseSqlServer("Server=DESKTOP-KHBGNKV\\SQLEXPRESS;Database=ecommerce_shop;trusted_connection=True;TrustServerCertificate=true;")
  );
 
-
 builder.Services.AddHttpContextAccessor();
-
-
 
 builder.Services.AddSession();
 var app = builder.Build();
