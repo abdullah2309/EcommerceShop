@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession();
 
-///abdullah HI ///
+/// Abdullah HI ///
 
 
 builder.Services.AddDbContext<MyDbcontext>(a =>
