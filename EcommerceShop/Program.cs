@@ -1,9 +1,7 @@
 ﻿using EcommerceShop.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 var builder = WebApplication.CreateBuilder(args);
-
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -11,8 +9,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 
 /// Abdullah HI ///
-
-
 builder.Services.AddDbContext<MyDbcontext>(a =>
 a.UseSqlServer("Server=DESKTOP-KHBGNKV\\SQLEXPRESS;Database=ecommerce_shop;trusted_connection=True;TrustServerCertificate=true;")
 );
